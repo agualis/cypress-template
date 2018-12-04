@@ -1,0 +1,11 @@
+/dist/
+/.cache/
+/media/*
+/node_modules/
+*.mo
+*.coverage
+*.sqlite3
+/.idea/
+*.DS_STORE
+*.log
+.cache
