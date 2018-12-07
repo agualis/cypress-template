@@ -22,6 +22,12 @@ export const write = (id, text) => get(id).clear(OPTIONS()).type(text, OPTIONS()
 
 export const get = (id) => cy.get(`[data-test=${id}]`)
 
+export const getInputByName = (name) => cy.get(`input[name="${name}"]`)
+
+export const getSelectByName = (name) => cy.get(`select[name="${name}"]`)
+
+export const fillInput = (name, value) => getInputByName(name).type(value)
+
 export const getSlow = (id) => cy.get(`[data-test=${id}]`, { timeout: 10000 })
 
 export const getFirst = (id) => get(id).first()
