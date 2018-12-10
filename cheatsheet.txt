@@ -1,0 +1,2 @@
+cy.get('#applicant-ccaa').click().contains('Aragón').click()
+cy.get('#applicant-ccaa > .search').type('Aragón').type(ENTER)
