@@ -18,4 +18,3 @@ context('When using Google search', () => {
   })
 
 })
-
