@@ -1,5 +1,5 @@
 import { TEST_PASSWORD, TEST_USER } from './globals'
-import { get, urlContains } from './helpers'
+import { getByDataTestId, urlContains } from './helpers'
 
 
 export const login = () => {

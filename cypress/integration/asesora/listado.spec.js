@@ -1,7 +1,6 @@
 /// <reference types="Cypress" />
 
-import { DOWN_ARROW, ENTER, fillInputWithName, get, getInputByName, urlContains } from '../../common/helpers'
-
+import { urlContains } from '../../common/helpers'
 
 context('Como asesor', () => {
   beforeEach(() => {
@@ -10,8 +9,13 @@ context('Como asesor', () => {
   })
 
   it('puedo mostrar una solicitude', () => {
-    cy.get('.solicitude-show-button').first().click()
+    openFirstSolicitude()
+    urlContains('show-solicitude.html')
+    cy.get('#text').contains('La primera solicitud')
   })
 
+  function openFirstSolicitude() {
+    cy.get('.solicitude-show-button').first().click()
+  }
 })
 

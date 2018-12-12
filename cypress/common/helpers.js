@@ -5,15 +5,7 @@ export const BACKSPACE = '{backspace}'
 
 export const OPTIONS = ()=> ({force: true})
 
-export const click = (id) => get(id).click(OPTIONS())
-
-export const clickFirst = (id) => get(id).first().click()
-
-export const clickLast = (id) => get(id).last().click()
-
-export const uncheck = (id) => get(id).uncheck()
-
-export const get = (id) => cy.get(`[data-test=${id}]`)
+export const getByDataTestId = (id) => cy.get(`[data-test=${id}]`)
 
 export const getInputByName = (name) => cy.get(`input[name="${name}"]`)
 
@@ -29,9 +21,4 @@ export const selectByClass= (className, value) => {
 }
 
 export const urlContains = (urlPart) => cy.url().should('contain', urlPart)
-
-export const stubRequest = (url, alias) => {
-  cy.server()
-  cy.route(url, [{}]).as(alias)
-}
 
