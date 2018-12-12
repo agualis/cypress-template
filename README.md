@@ -1,5 +1,7 @@
 ## Plantilla con ejemplos para el curso de test funcional en la cova
 
+[Good shit](https://docs.google.com/presentation/d/1P5vIA-Fk2RFkf7GW1044JicBdofnz814ag1IvGkQaSw/edit?usp=sharing)
+
 ### Instalación
 
 `npm install`
